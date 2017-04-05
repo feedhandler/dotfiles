@@ -1,0 +1,16 @@
+[color]
+	ui = true
+[user]
+	name = Tim Mason
+	email = tmason@euronext.com
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
+[push]
+	default = simple
+[merge]
+    tool = meld
+
+[core]
+	editor = vim

@@ -1,0 +1,4 @@
+--noheading
+--color-filename=clear
+--color-lineno=clear
+--type-set=cpp:ext:cpp,cc,c,hpp,hh,h
