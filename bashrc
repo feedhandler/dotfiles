@@ -213,3 +213,11 @@ sigmaEnv()
 
 ###############################################################################
 ###############################################################################
+
+alias clip='xargs echo -n | xclip -selection clipboard'
+alias ag='ag --noheading'
+alias gr='git remote -v | head -1 | cut -f 2 | cut -d " " -f 1'
+
+export http_proxy="http://localhost:3128"
+export https_proxy="http://localhost:3128"
+export ftp_proxy="http://localhost:3128"
