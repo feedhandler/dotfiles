@@ -1,0 +1,27 @@
+#! /usr/bin/env python
+
+# Wrapper for "meld"
+# if there are two arguments, and one is a file and the other is a directory,
+# then convert them both to files, and pass to meld
+
+import os
+import subprocess
+import sys
+
+if len(sys.argv)==3:
+
+  arg1 = sys.argv[1]
+  arg2 = sys.argv[2]
+
+  if os.path.isfile(arg1) and os.path.isdir(arg2):
+    arg2 = os.path.join(arg2, arg1)
+  elif os.path.isdir(arg1) and os.path.isfile(arg2):
+    arg1 = os.path.join(arg1, arg2)
+
+  args = "%s %s" % (arg1, arg2)
+
+else:
+
+  args = " ".join(sys.argv[1:])
+
+subprocess.call("meld %s" % args, shell=True)
